@@ -12,7 +12,7 @@ function name_to_abbrev(name) {
 
 // Load recent paper list
 function setupWriting() {
-    var n = 5; // number of papers
+    var n = 3; // number of papers
 
     $.ajax({
         url: 'http://export.arxiv.org/api/query?search_query=au:barclay_t+cat:astro-ph&start=0&max_results=100&sortBy=submittedDate', // or lastUpdatedDate

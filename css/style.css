@@ -178,7 +178,7 @@
 			section > .container > :last-child,
 			article > .container > :last-child
 			{
-				margin-bottom: 0;
+				margin-bottom: 0em;
 			}
 
 			section:last-child,
@@ -833,7 +833,7 @@
 			{
 				background-color: #81918E;
 				background-image: url('../images/Earth.jpg');
-				opacity: 0.8;
+				opacity: 0.9;
 			}
 
 			#main > section.two

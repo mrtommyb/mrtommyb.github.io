@@ -15,7 +15,7 @@ function setupWriting() {
     var n = 3; // number of papers
 
     $.ajax({
-        url: 'http://export.arxiv.org/api/query?search_query=au:barclay_t+cat:astro-ph&start=0&max_results=100&sortBy=submittedDate', // or lastUpdatedDate
+        url: 'https://export.arxiv.org/api/query?search_query=au:barclay_t+cat:astro-ph&start=0&max_results=100&sortBy=submittedDate', // or lastUpdatedDate
         type: 'GET',
         dataType: "xml",
         async: true,

@@ -1,301 +1,396 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131053244-2"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tom Barclay — Astrophysicist & Technical Leader</title>
+    <meta name="description" content="Tom Barclay is an astrophysicist and technical leader at NASA Goddard Space Flight Center. 15+ years building and operating space telescopes, 150+ publications, open-source Python developer, and expert in Bayesian inference, signal detection, and large-scale data analysis." />
+    <meta property="og:title" content="Tom Barclay — Astrophysicist & Technical Leader" />
+    <meta property="og:description" content="Astrophysicist at NASA. 15 years extracting signal from noise in space telescope data. Python, Bayesian inference, Monte Carlo simulation, and technical program leadership." />
+    <meta property="og:image" content="images/tom.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dr.tombarclay.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
 
-		  gtag('config', 'UA-131053244-2');
-		</script>
-		<title>Dr Tom Barclay</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+    <!-- Navigation -->
+    <nav class="site-nav" id="site-nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">Tom Barclay</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#missions">Missions</a></li>
+                <li><a href="#software">Software</a></li>
+                <li><a href="#publications">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="files/CVBarclay.pdf" class="nav-cv">CV</a></li>
+            </ul>
+        </div>
+    </nav>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <!-- Hero -->
+    <header class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1>Tom Barclay</h1>
+                <p class="hero-role">Astrophysicist · Technical Leader · Software Engineer</p>
+                <p class="hero-org">NASA Goddard Space Flight Center</p>
+                <p class="hero-intro">I build production software systems, extract faint signals from noisy data, and lead technical teams that operate billion-dollar space observatories. 15 years shipping Python packages, designing data pipelines, and turning petabytes of telemetry into discoveries — using Bayesian inference, Monte Carlo simulation, and large-scale distributed systems.</p>
+                <div class="hero-actions">
+                    <a href="files/CVBarclay.pdf" class="btn btn-primary">Download CV</a>
+                    <a href="#missions" class="btn btn-outline">View Missions</a>
+                </div>
+                <ul class="hero-links">
+                    <li><a href="https://github.com/mrtommyb" aria-label="GitHub">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </a></li>
+                    <li><a href="https://www.linkedin.com/pub/tom-barclay/22/794/287" aria-label="LinkedIn">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a></li>
+                    <li><a href="mailto:thomas.barclay@nasa.gov" aria-label="Email">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="hero-image">
+                <img src="images/tom.jpg" alt="Tom Barclay" />
+            </div>
+        </div>
+    </header>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+    <main>
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Tom Barclay</strong> Research Scientist</a>
-									<ul class="icons">
-										<li><a href="https://twitter.com/mrtommyb" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="https://github.com/mrtommyb" class="icon fa-github"><span class="label">Github</span></a></li>
-										<li><a href="https://www.linkedin.com/pub/tom-barclay/22/794/287" class="icon fa-linkedin"><span class="label">Email</span></a></li>
-                            			<li><a href="mailto:tomsbarclay@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>									
-                            		</ul>
-								</header>
+        <!-- Impact Stats -->
+        <section class="stats-bar">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Years at NASA</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Publications</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">31,000+</span>
+                        <span class="stat-label">Citations</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">80</span>
+                        <span class="stat-label">h-index</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Space Missions</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>Hi there, I'm Tom Barclay</h1>
-											<p>I use space telescopes to learn things about the universe</p>
-										</header>
+        <!-- Missions & Leadership -->
+        <section class="section missions" id="missions">
+            <div class="container">
+                <h2 class="section-title">Missions &amp; Leadership</h2>
+                <p class="section-intro">I've led or contributed to five NASA flight missions since 2011 — from concept development through launch and operations — as well as supporting national security space programs. Each involved building software systems, managing cross-functional teams, and making high-stakes decisions under uncertainty.</p>
 
-										<p>I'm at scientist based at NASA's Goddard Space Flight Center, in Greenbelt, MD. I am the Operations Scientist for the Nancy Grace Roman Space Telescope, and am the Deputy Project Scientist the Pandora SmallSat. My primary scientific interests lie in the analysis of data from space and ground-based telescopes to infer properties of exoplanets and their host stars.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date">2022 – Present</span>
+                            <h3>Nancy Grace Roman Space Telescope</h3>
+                            <p class="timeline-role">Operations Project Scientist</p>
+                            <p>Leading science operations planning for NASA's next astrophysics flagship — a $4.3B wide-field infrared survey observatory, now fully assembled and targeting launch in fall 2026. Responsible for ensuring observatory operations are optimized to achieve science objectives across dark energy, exoplanet microlensing, and galactic structure surveys. Member of the Project Scientist team coordinating Cycle 1 community proposals.</p>
+                        </div>
+                    </div>
 
-										<ul class="actions">
-											<li><a href="#about" class="button big">Learn More</a></li>
-										</ul>
-									</div>
-									<span class="image object">
-										<img src="images/tom.jpg" alt="" />
-									</span>
-								</section>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date">2021 – Present</span>
+                            <h3>Pandora SmallSat</h3>
+                            <p class="timeline-role">Deputy Project Scientist</p>
+                            <p>Oversaw science requirements and Observatory design for this Astrophysics Pioneers Program mission studying how stellar activity contaminates exoplanet transmission spectra. Led the mission from concept through integration, testing, and <strong>successful launch on January 11, 2026</strong> aboard a SpaceX Falcon 9. The mission is now in orbit and commissioning.</p>
+                        </div>
+                    </div>
 
-							<!-- Section -->
-								<section>
-									<header class="major" id="research">
-										<h2>Research Interests</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-rocket"></span>
-											<div class="content">
-												<h3>Time Domain Science</h3>
-												<p>I use time-series data from space to learn things about stars, planets and galaxies. I focusing on the discovery and characterization of exoplanet but have also studied stellar oscillations, and galactic transients.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon fa-calculator"></span>
-											<div class="content">
-												<h3>Statistical Methods</h3>
-												<p>I enjoy applying novel statistical techniques to data-based problems in astrophysics. Mostly this involves using tools like Gaussian Processes and Markov Chain Monte Carlo.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon fa-globe"></span>
-											<div class="content">
-												<h3>Planet Formation</h3>
-												<p>I use N-body simulations to model the formation and evolution of rocky planets, measure impact rates, and track water delivery. Our Solar System formed one temperate planet that has long-lived oceans. Why did this happen, and are we an anomaly?</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon fa-star"></span>
-											<div class="content">
-												<h3>Stellar Activity</h3>
-												<p>I lead a large multiwavelength project to measure the rate and energies of stellar flares with data spanning radio to X-ray. The goal is to determine whether planets around cool stars are good places to search for life</p>
-											</div>
-										</article>
-									</div>
-								</section>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date">2025 – Present</span>
+                            <h3>ULTRASAT</h3>
+                            <p class="timeline-role">Participating Scientist</p>
+                            <p>Contributing to NASA's participation in the Israeli-led Ultraviolet Transient Astronomy Satellite, a wide-field UV space telescope that will survey the transient sky. ULTRASAT will detect stellar explosions, merging neutron stars, and other time-domain events in the ultraviolet.</p>
+                        </div>
+                    </div>
 
-							<!-- Section -->
-								<section>
-									<header class="major" id="about">
-										<h2>About Me</h2>
-									</header>
-									<p><span class="image left"><img src="images/paintingoftom.png" alt="" /></span>I have worked NASA flight projects since 2011, including pre- and post-launch operations. I am the Operations Scientist for NASA's next astrophysics flagship, the Nancy Grace Roman Space Telescope. I also work on the TESS mission and the Pandora SmallSat. While based at NASA's Goddard Space Flight Center, I work for the <a href="http://umbc.edu/">University of Maryland, Baltimore County</a>.</p>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date">2017 – 2022</span>
+                            <h3>TESS (Transiting Exoplanet Survey Satellite)</h3>
+                            <p class="timeline-role">Associate Project Scientist &amp; GI Program Director</p>
+                            <p>Served as Associate Project Scientist and Director of the Guest Investigator Program, managing community access to TESS data and observations. Led the program through its primary mission phase, supporting hundreds of investigators worldwide. Co-led the discovery of TESS's first habitable-zone Earth-sized planet (TOI-700 d).</p>
+                        </div>
+                    </div>
 
-									<p align="left">My primary scientific interests lie in the analysis of data from space and ground-based telescopes to infer properties of exoplanets and their host stars. This has led to a number of major discoveries including the detection of the <a href="http://science.time.com/2013/02/22/discovered-the-most-adorable-planet-yet/">smallest known planet</a>, the detection of the <a href="http://www.nasa.gov/mission_pages/kepler/news/kepler-62-kepler-69.html">first super-Earth-sized planet</a> orbiting in the habitable zone of a Sun-like star, and the detection of the <a href="http://www.cnn.com/2014/04/17/tech/space-earth-size-planet/">first Earth-sized planet</a> in the habitable zone of another star.</p>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-date">2011 – 2017</span>
+                            <h3>Kepler &amp; K2</h3>
+                            <p class="timeline-role">Guest Observer Office Director</p>
+                            <p>Joined the Kepler mission at NASA Ames Research Center as a research scientist; promoted to Director of the Kepler/K2 Guest Observer Office in 2014. Led a team developing proposal calls, organizing reviews, and building community analysis software. Part of the small team that pioneered the K2 mission after loss of spacecraft fine pointing control. Served on the science and mission leadership teams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-									<p align="left">I grew up in the city of <a href="http://en.wikipedia.org/wiki/Sheffield">Sheffield in Northern England</a>, UK. My undergraduate studies were performed at the <a href="http://www.physics.leeds.ac.uk/">University of Leeds</a>, UK where I obtained a Bachelors degree in Physics with Astrophysics in 2006. My Masters thesis work was performed at the <a href="http://www.jb.man.ac.uk/">Jodrell Bank Observatory</a>, part of the University of Manchester. I obtained a Master of Science degree in 2007 for work to understand Galactic dust emission. I then moved to Northern Ireland for my doctoral studies where I worked at the <a href="http://star.arm.ac.uk/">Armagh Observatory</a>. I was co-supervised, and was awarded my Ph.D. by, <a href="http://www.ucl.ac.uk/mssl">University College London</a> in 2011. I worked on understanding the population of <a href="http://adsabs.harvard.edu/abs/2011MNRAS.413.2696B">ultra-compact white dwarf binaries</a>.</p>
-							
-									<p><span class="image right"><img src="images/tomatkennedy.jpg" alt="" /></span>After my postgraduate studies, I was appointed to the Kepler Guest Observer Office at NASA Ames Research Center, California as a research scientist.</p>
+        <!-- Open Source Software -->
+        <section class="section software" id="software">
+            <div class="container">
+                <h2 class="section-title">Open Source Software</h2>
+                <p class="section-intro">I've shipped production Python packages across four NASA missions — from observation schedulers and visibility tools to data analysis frameworks used by thousands. <a href="https://github.com/mrtommyb">94 repositories</a> on GitHub, contributor to 4 NASA organizations.</p>
 
-									<p align="left">In 2014 I was promoted to Director of the Kepler/K2 Guest Observer Office. I led a team responsible for developing proposal calls, organizing proposal reviews, providing critical support to the scientific community and developing software to enhance output from Kepler and K2. I was part of the small team that pioneered the K2 mission, utilizing the Kepler spacecraft after the loss of fine pointing control. I served on the science and mission leadership teams for K2.</p>
+                <div class="software-grid">
+                    <div class="software-card software-card-featured">
+                        <div class="software-header">
+                            <h3>Pandora SmallSat</h3>
+                            <span class="software-badge">Flight Planning Lead</span>
+                        </div>
+                        <p>I lead flight planning software for NASA's Pandora SmallSat. I built the observation scheduling and target visibility tools that determine what the spacecraft observes and when — parsing observation calendars, computing observability windows against orbital constraints, and generating command products.</p>
+                        <div class="software-stack">
+                            <span>Python</span><span>Astropy</span><span>NumPy</span><span>Poetry</span><span>CI/CD</span><span>XML Processing</span>
+                        </div>
+                        <div class="software-repos">
+                            <a href="https://github.com/PandoraMission/pandora-short-term-scheduler">pandora-short-term-scheduler</a>
+                            <a href="https://github.com/PandoraMission/pandora-visibility">pandora-visibility</a>
+                            <a href="https://github.com/PandoraMission/pandora-scheduler">pandora-scheduler</a>
+                        </div>
+                    </div>
 
-									<p align="left">In 2017 I moved to NASA's Goddard Space Flight Center in Greenbelt, Maryland to work on the <a href="https://heasarc.gsfc.nasa.gov/docs/tess/">TESS mission</a>. I initially, served as Deputy Director and then Director of the TESS Guest Investigator Program, and as Associate Project Scientist. I have worked on several mission development project, including serving as Deputy PI of an Explorer proposal that would have observed the transient sky at UV and visible wavelengths. I am the Deputy Project Scientist of the Pandora Smallsat, with responsibility for the Observatory. This mission was selected in the inaugural NASA Astrophysics Pioneers program in 2021 and has since been approved to proceed toward flight.
+                    <div class="software-card">
+                        <div class="software-header">
+                            <h3>Lightkurve</h3>
+                            <span class="software-stars">&#9733; 380+ &nbsp;·&nbsp; 1,200+ citations</span>
+                        </div>
+                        <p>Core developer of the standard Python package for analyzing time-series data from NASA's Kepler, K2, and TESS missions. Used by thousands of researchers worldwide. Features aperture photometry, systematics correction via linear algebra and Gaussian Processes, periodogram analysis, and pixel-level diagnostics.</p>
+                        <div class="software-stack">
+                            <span>Python</span><span>NumPy</span><span>SciPy</span><span>Matplotlib</span><span>Astropy</span>
+                        </div>
+                        <div class="software-repos">
+                            <a href="https://github.com/lightkurve/lightkurve">lightkurve</a>
+                            <a href="https://docs.lightkurve.org">Documentation</a>
+                        </div>
+                    </div>
 
+                    <div class="software-card">
+                        <div class="software-header">
+                            <h3>Kepler/K2 Community Tools</h3>
+                            <span class="software-stars">&#9733; 119 (pyke)</span>
+                        </div>
+                        <p>Led development of the KeplerGO software suite — the official community tools for NASA's Kepler and K2 missions. Includes data reduction pipelines, field-of-view calculators, target pixel file animators, and publication tracking databases. Used by hundreds of astronomers for proposal preparation and data analysis.</p>
+                        <div class="software-stack">
+                            <span>Python</span><span>FITS I/O</span><span>WCS</span><span>PyPI</span>
+                        </div>
+                        <div class="software-repos">
+                            <a href="https://github.com/KeplerGO/pyke">pyke</a>
+                            <a href="https://github.com/KeplerGO/K2fov">K2fov</a>
+                            <a href="https://github.com/KeplerGO/k2flix">k2flix</a>
+                            <a href="https://github.com/KeplerGO/kpub">kpub</a>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
+        </section>
 
-									<ul class="actions">
-										<li><a href="files/CVBarclay.pdf" class="button">Short CV</a></li>
-									</ul>
+        <!-- Publications -->
+        <section class="section publications" id="publications">
+            <div class="container">
+                <h2 class="section-title">Selected Work</h2>
+                <p class="section-intro">Over <a href="https://ui.adsabs.harvard.edu/search/q=%20author%3A%22barclay%2C%20t%22%20%20year%3A2009-&sort=date%20desc%2C%20bibcode%20desc&p_=0">150 refereed publications</a> with 31,000+ citations (<a href="https://scholar.google.com/citations?user=Az-8dqUAAAAJ">Google Scholar</a>). Selected papers below highlight signal detection, statistical modeling, simulation, and open-source software.</p>
 
+                <div class="pub-highlights">
+                    <div class="pub-card">
+                        <span class="pub-journal">IEEE Aerospace Conference, 2025</span>
+                        <h3>The Pandora SmallSat: A Low-Cost, High Impact Mission</h3>
+                        <p>First-author paper describing the end-to-end design, simulation tools, and management approach for the Pandora mission. Covers how the team built high-fidelity parameterized simulation and modeling tools to estimate performance, and how disruptive agile management delivered a 0.44 m space telescope on a SmallSat budget.</p>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/11068492/" class="pub-link">Barclay, Quintana, Col&oacute;n et al. &rarr;</a>
+                    </div>
 
-								</section>
+                    <div class="pub-card">
+                        <span class="pub-journal">Nature, 2013</span>
+                        <h3>A Sub-Mercury-Sized Exoplanet (Kepler-37b)</h3>
+                        <p>Detected the smallest known planet by extracting an exoplanet transit signal with a depth of just 20 parts per million from noisy photometric data. Used asteroseismology to precisely characterize the host star and constrain the planet radius to smaller than Mercury.</p>
+                        <a href="https://ui.adsabs.harvard.edu/abs/2013Natur.494..452B" class="pub-link">Barclay, Rowe, Lissauer et al. &rarr;</a>
+                    </div>
 
-							    <!-- Writing -->
-								<section id="publications" class="major">
-								    <div class="container">
-								        <header class="major">
-								            <h2>Publications</h2>
-								        </header>
-								        <p>I've published over <a href="http://arxiv.org/find/all/1/au:+barclay_t/0/1/0/2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025/0/1?per_page=1000">110 refereed papers</a>, on all manner of topics in astrophysics ranging from planets in our solar system to distant supernovae. Below are a list of papers that I've been a part and am especially proud of, or I think are particularly interesting for one reason or another.</p>
-													<dl>
-														<dt>The L 98-59 System: Three Transiting, Terrestrial-Sized Planets Orbiting a Nearby M-dwarf</dt>
-														<dd>
-															<p>We reported the discovery of three terrestrial-sized planets transiting L 98-59, a bright M dwarf at a distance of 10.6 pc. The planets radii range from 0.7 REarth to 1.3 REarth. The planets are prime targets for future transit spectroscopy with the James Webb Space Telescope. <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv190308017K">(Kostov, Schlieder, Barclay et al. 2019, AJ)</a></p>
-														</dd>
-														<dt>A Revised Exoplanet Yield from the Transiting Exoplanet Survey Satellite (TESS)</dt>
-														<dd>
-															<p>In this paper wemade estimated of how many exoplanets the TESS mission would detect, the physical properties of the detected planets, and the properties of the stars that those planets orbit. The hope was that it would be useful for people planning future observations. The simulation data are available from <a href="https://figshare.com/articles/Planet_and_host_star_properties/6137672">Figshare</a>. These simulations seems to have done a pretty good job at predicting the real distribution of TESS planets. <a href="https://ui.adsabs.harvard.edu/abs/2018ApJS..239....2B">(Barclay, Quintana and Pepper, 2018, ApJS)</a></p>
-														</dd>
-														<dt>The Demographics of Rocky Free-floating Planets and their Detectability by WFIRST</dt>
-														<dd>
-															<p>I wanted to make a prediction about what WFIRST will find. During tplanet formation, material in the disk either remains bound to the star as part of either a planet, a smaller celestial body, or makes up part of the the interplanetary medium; falls into the star; or is ejected from the system. We used dynamical models to probe the abundance and properties of ejected material during late-stage planet formation and estimate their contribution to the free-floating planet population. We predicted that the space-borne microlensing search for free-floating planets from the WFIRST will discover up to many Mars-mass planets, but few free-floating Earths. <a href="https://ui.adsabs.harvard.edu/abs/2017ApJ...841...86B">(Barclay, Quintana, Raymond and Penny, 2017, ApJ)</a></p>
-														</dd>
-														<dt>An Ancient Extrasolar System with Five Sub-Earth-size Planets</dt>
-														<dd>
-															<p>This is definitely my favorite planetary system. We reported the discovery of five transiting planets with sizes between those of Mercury. The host star, Kepler-444 is the densest star with detected solar-like oscillations. We used asteroseismology to directly measure a precise age of 11.2 Gyr for the host star, indicating that Kepler-444 formed when the universe was less than 20% of its current age and making it the oldest known system of terrestrial-size planets. We thus show that Earth-size planets have formed throughout most of the universe's 13.8 billion year history, leaving open the possibility for the existence of ancient life in the Galaxy. <a href="https://ui.adsabs.harvard.edu/abs/2015ApJ...799..170C">(Campante, Barclay, Swift et al., 2015, ApJ)</a></p>
-														</dd>
-														<dt>The Five Planets in the Kepler-296 Binary System All Orbit the Primary: A Statistical and Analytical Analysis</dt>
-														<dd>
-															<p>In this paper we used a neat statistical technique determine the host star for five planets. Kepler-296 is a binary star system with two close M-dwarf components and five transiting planets. However, the planets could in principle orbit either star. Using importance sampling, we compared the model probabilities under the priors of the planets orbiting either the brighter or the fainter component of the binary. A model where the planets orbit the brighter component, Kepler-296A, is strongly preferred by the data. <a href="https://ui.adsabs.harvard.edu/abs/2015ApJ...809....7B">(Barclay, Quintana, Adams et al., 2015, ApJ)</a></p>
-														</dd>
-														<dt>Radial Velocity Observations and Light Curve Noise Modeling Confirm that Kepler-91b is a Giant Planet Orbiting a Giant Star
-</dt>
-														<dd>
-															<p>Kepler-91b is a rare example of a transiting hot Jupiter around a red giant star. However, the planetary nature of Kepler-91b, was called into question. The star exhibits temporally correlated noise due to stellar granulation which we modeled as a Gaussian Process simultaneously with transit, phase curve and radial velocity models. We hypothesized that it is this noise component that led previous studies to suspect Kepler-91b was a false positive. This is one of the first times that GPs were used to model stellar variability. <a href="https://ui.adsabs.harvard.edu/abs/2015ApJ...800...46B">(Barclay, Endl, Huber et al., 2015, ApJ)</a></p>
-														</dd>
-														<dt>An Earth-Sized Planet in the Habitable Zone of a Cool Star</dt>
-														<dd>
-															<p>This was the first Earth-sized planet in the habitable zone of another. We presented the detection of Kepler-186f, a 1.1 Earth-radius planet that is the outermost of five planets, all roughly Earth-sized. The intensity and spectrum of the star’s radiation place Kepler-186f in the stellar habitable zone, implying that if Kepler-186f has an Earth-like atmosphere and water at its surface, then some of this water is likely to be in liquid form. <a href="https://ui.adsabs.harvard.edu/abs/2014Sci...344..277Q">(Quintana, Barclay, Raymond, et al., 2014, Science)</a></p>
-														</dd>
-														<dt>A sub-Mercury-sized exoplanet</dt>
-														<dd>
-															<p>Here we reported a planet significantly smaller than Mercury. This tiny planet is the innermost of three that orbit the Sun-like host star, which we designated Kepler-37. We used asteroseismology to determine the properties of the host star. Kepler-37b is still the smallest known planet. <a href="https://ui.adsabs.harvard.edu/abs/2013Natur.494..452B">(Barclay, Rowe, Lissauer, et al., 2013, Nature)</a></p>
-														</dd>
-													</dl>
-								        <h3>Recent Publications</h3>
-								        <footer>
-								        	<div id="recent-papers"></div>
+                    <div class="pub-card">
+                        <span class="pub-journal">ApJS, 2018 &mdash; 270+ citations</span>
+                        <h3>Predicting TESS Exoplanet Yields via Simulation</h3>
+                        <p>Built a large-scale Monte Carlo simulation of the TESS mission &mdash; synthesizing stellar populations, injecting planetary signals, and modeling detection pipelines &mdash; to predict the mission's planet yield. Predictions accurately matched actual discoveries years later.</p>
+                        <a href="https://ui.adsabs.harvard.edu/abs/2018ApJS..239....2B" class="pub-link">Barclay, Pepper &amp; Quintana &rarr;</a>
+                    </div>
 
-								        		<div class="row">
-								        			<div class="4u -2u">
-								            			<a href="https://ui.adsabs.harvard.edu/search/q=%20author%3A%22barclay%2C%20t%22%20%20year%3A2009-&sort=date%20desc%2C%20bibcode%20desc&p_=0" class="button">ADS Search</a>
-								        			</div>
-								        		<div class="4u +2u$">
-								            		<a href="https://arxiv.org/search/advanced?advanced=1&terms-0-operator=AND&terms-0-term=barclay%2C+t&terms-0-field=author&classification-physics=y&classification-physics_archives=astro-ph&classification-include_cross_list=include&date-year=&date-filter_by=date_range&date-from_date=2009&date-to_date=&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first" class="button">arXiv search</a>
-								        		</div>
-								        	</div>
-								        </footer>
-					    			</div>
-								</section>
-								<section id="contact" class="major">
-								    <div class="container">
-								        <header class="major">
-								            <h2>Contact Me</h2>
-								        </header>
-										<h3>Reach out</h3>
-									    <p>If you're looking to get in touch with me, the best method is email. For most issues you're best contacting me on <a href="mailto:tomsbarclay@gmail.com">tomsbarclay@gmail.com</a>. For NASA business (anything about the TESS GI Program, for example) please use my NASA address <a href="mailto:thomas.barclay@nasa.gov">thomas.barclay@nasa.gov</a>.</p>
+                    <div class="pub-card">
+                        <span class="pub-journal">AJ, 2020</span>
+                        <h3>TESS's First Habitable-Zone Earth-Sized Planet</h3>
+                        <p>Co-led the discovery and statistical validation of TOI-700 d, a 1.19 R&#8853; planet receiving 86% of Earth's insolation. Combined multi-sector time-series analysis, Bayesian false-positive probability calculations, and ground-based follow-up to confirm the detection.</p>
+                        <a href="https://ui.adsabs.harvard.edu/abs/2020AJ....160..116G" class="pub-link">Gilbert, Barclay, Schlieder et al. &rarr;</a>
+                    </div>
 
-									    <h3>Consulting</h3>
-									    <p>Have an astronomy, data science, proposal preparation, anything else project that you'd like someone to consult on? Perhaps I can help. I have a registered sole proprietorship business in Maryland for consulting work. I've done previous work for a lovely company called <a href="https://www.underluckystars.com/">Under Lucky Stars</a>.
+                    <div class="pub-card">
+                        <span class="pub-journal">Science, 2014</span>
+                        <h3>First Earth-Sized Planet in the Habitable Zone</h3>
+                        <p>Co-discovered Kepler-186f, a 1.1 R&#8853; planet in the habitable zone of an M dwarf &mdash; proof that Earth-sized worlds exist where liquid water is possible. Required distinguishing a genuine signal from correlated noise in 4 years of photometry.</p>
+                        <a href="https://ui.adsabs.harvard.edu/abs/2014Sci...344..277Q" class="pub-link">Quintana, Barclay, Raymond et al. &rarr;</a>
+                    </div>
 
+                    <div class="pub-card">
+                        <span class="pub-journal">ApJ, 2015</span>
+                        <h3>Oldest Known Terrestrial Planet System</h3>
+                        <p>Discovered Kepler-444, a system of five sub-Earth-sized planets orbiting an 11.2-billion-year-old star. Applied asteroseismic age-dating (Bayesian stellar modeling) to show Earth-sized worlds have formed throughout most of cosmic history.</p>
+                        <a href="https://ui.adsabs.harvard.edu/abs/2015ApJ...799..170C" class="pub-link">Campante, Barclay, Swift et al. &rarr;</a>
+                    </div>
+                </div>
 
-								        </p>
-					    			</div>
-								</section>
+                <div class="pub-actions">
+                    <a href="https://ui.adsabs.harvard.edu/search/q=%20author%3A%22barclay%2C%20t%22%20%20year%3A2009-&sort=date%20desc%2C%20bibcode%20desc&p_=0" class="btn btn-outline">Full Publication List (ADS)</a>
+                    <a href="https://scholar.google.com/citations?user=Az-8dqUAAAAJ" class="btn btn-outline">Google Scholar</a>
+                    <a href="https://github.com/mrtommyb" class="btn btn-outline">GitHub</a>
+                </div>
+            </div>
+        </section>
 
+        <!-- About -->
+        <section class="section about" id="about">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>I'm an astrophysicist at <a href="https://science.gsfc.nasa.gov/sci/bio/thomas.barclay">NASA's Goddard Space Flight Center</a>, where I've been a civil servant since 2023. Before that I was a research scientist at UMBC/NASA (2017–2023) and at the BAER Institute/NASA Ames (2011–2017).</p>
+                        <p>My day job is leading science operations for the Roman Space Telescope, but my career has been a blend of hands-on software engineering and technical program management. I write production Python, build scheduling and planning tools for space telescopes, apply Bayesian methods (MCMC, Gaussian Processes, nested sampling) to extract weak signals from noisy observations, and ship Monte Carlo simulations to predict mission outcomes. I've built or contributed to <a href="#software">numerous open-source Python packages</a> across four NASA missions, including <a href="https://docs.lightkurve.org">Lightkurve</a> (1,200+ citations, used by thousands of researchers) and the Pandora SmallSat flight planning software.</p>
+                        <p>I've led teams through every phase of the space mission lifecycle — from proposal writing and requirements definition, through hardware I&T and launch, to operations and long-term data analysis. I care about shipping reliable software, making principled decisions under uncertainty, and building systems that scale.</p>
+                        <p>I grew up in Sheffield, England. BSc Physics with Astrophysics, University of Leeds (2006); MSc, University of Manchester / Jodrell Bank (2007); PhD, University College London / Armagh Observatory (2011).</p>
 
-						</div>
-					</div>
+                        <h4 class="awards-heading">Awards</h4>
+                        <ul class="awards-list">
+                            <li><strong>NASA Early Career Achievement Medal</strong> (2022)</li>
+                            <li><strong>NASA Exceptional Public Service Medal</strong> (2017)</li>
+                            <li><strong>ASD Peer Award</strong> (2019)</li>
+                        </ul>
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+                        <div class="about-actions">
+                            <a href="files/CVBarclay.pdf" class="btn btn-primary">Download Full CV</a>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/tomatkennedy.jpg" alt="Tom Barclay at Kennedy Space Center" loading="lazy" />
+                    </div>
+                </div>
 
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Intro</a></li>
-										<li><a href="#research">Research Interests</a></li>
-										<li><a href="#about">About Me</a></li>
-										<li><a href="#publications">Publications</a></li>
-									</ul>
-								</nav>
+                <h3 class="subsection-title">Core Competencies</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h4>Signal Detection &amp; Time Series</h4>
+                        <p>Extracting weak, periodic, or transient signals from noisy, high-dimensional data. Transit detection, anomaly identification, and systematics modeling in multi-year photometric datasets.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Bayesian Inference &amp; Modeling</h4>
+                        <p>MCMC, nested sampling, Gaussian Processes, hierarchical models. Designing probabilistic frameworks for parameter estimation and model comparison under uncertainty.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Python &amp; Production Software</h4>
+                        <p>Shipped 12+ open-source Python packages across 4 NASA missions. Core developer of <a href="https://github.com/lightkurve/lightkurve">Lightkurve</a> (1,200+ citations). Deep experience with NumPy, SciPy, pandas, scikit-learn, Poetry, CI/CD, and test-driven development.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Technical Program Leadership</h4>
+                        <p>End-to-end management of complex technical programs: requirements, milestones, risk, and cross-functional coordination across engineering, science, and operations teams of 50–200 people.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Simulation &amp; Prediction</h4>
+                        <p>Large-scale Monte Carlo simulations to forecast mission performance. Population synthesis, injection-recovery testing, and forward modeling of instrument response.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h4>Evaluation &amp; Benchmarking</h4>
+                        <p>Designed evaluation frameworks and ran multi-year competitive review programs for three NASA missions. Built injection-recovery test pipelines, developed assessment rubrics, and made resource allocation decisions under competing priorities.</p>
+                    </div>
+                </div>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<p>Let's talk about science, collaborations, nerd out about space. I also do little consulting work, let me know what you need.</p>
-									<ul class="contact">
-										<li class="fa-envelope-o"><a href="mailto:tomsbarclay@gmail.com">tomsbarclay@gmail.com</a></li>
-										<li class="fa-phone">+1-301-286-5079</li>
-										<li class="fa-rocket">NASA Goddard Space Flight Center<br />
-										Greenbelt, MD 20771</li>
-										<li class="fa-twitter"><a href="https://twitter.com/mrtommyb">mrtommyb</a></li>
-									</ul>
-								</section>
+                <h3 class="subsection-title">What I Want to Work On Next</h3>
+                <div class="research-grid">
+                    <div class="research-card">
+                        <h4>AI Safety &amp; Alignment</h4>
+                        <p>Bringing rigorous statistical reasoning and uncertainty quantification to the problem of making AI systems reliable and trustworthy. My career has been about making high-stakes decisions under uncertainty — I want to apply that to the most important technical challenge of our time.</p>
+                    </div>
+                    <div class="research-card">
+                        <h4>Complex System Evaluation</h4>
+                        <p>Designing evaluation frameworks for systems too complex to fully specify. I've built injection-recovery pipelines and false-positive tests for planet detection — the same mindset applies to evaluating language model capabilities and limitations.</p>
+                    </div>
+                    <div class="research-card">
+                        <h4>ML Infrastructure &amp; Tooling</h4>
+                        <p>Building production-grade Python systems that researchers and engineers can rely on. 15 years of designing APIs, writing tests, shipping packages to PyPI, and maintaining software used by thousands of people.</p>
+                    </div>
+                    <div class="research-card">
+                        <h4>Technical Leadership</h4>
+                        <p>Leading cross-functional teams through ambiguous, high-stakes technical programs. I've managed teams of 5–200 across engineering, science, and operations — and I know how to ship on a deadline.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+    </main>
 
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Thomas Barclay. 2019. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
+    <!-- Footer / Contact -->
+    <footer class="site-footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h2>Get in Touch</h2>
+                    <p>I'm always happy to talk about how the skills I've built at NASA translate to industry — especially AI safety, ML infrastructure, and technical leadership. For industry inquiries, use my personal email.</p>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+                            <a href="mailto:thomas.barclay@nasa.gov">thomas.barclay@nasa.gov</a>
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+                            <a href="mailto:tomsbarclay@gmail.com">tomsbarclay@gmail.com</a>
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            NASA Goddard Space Flight Center, Greenbelt, MD 20771
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="https://github.com/mrtommyb">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/pub/tom-barclay/22/794/287">LinkedIn</a></li>
+                        <li><a href="https://scholar.google.com/citations?user=Az-8dqUAAAAJ">Google Scholar</a></li>
+                        <li><a href="https://ui.adsabs.harvard.edu/search/q=%20author%3A%22barclay%2C%20t%22%20%20year%3A2009-&sort=date%20desc%2C%20bibcode%20desc&p_=0">ADS Publications</a></li>
+                        <li><a href="https://science.gsfc.nasa.gov/sci/bio/thomas.barclay">NASA Bio</a></li>
+                        <li><a href="files/CVBarclay.pdf">Download CV</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Thomas Barclay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-						</div>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-			<script src="assets/js/writing.js"></script>
-		    <script type="text/javascript">
-			    function setupResearchSections() {
-			        // highlight initially selected research topic
-			        $("#research .row .btn").each(function(j,elem) {
-			            rowID = $(elem).attr("row");
-			            $("#" + rowID).hide();
-			        });
-			        // Default selection
-			        $("#select-streams").addClass("btn-filled");
-			        rowID = $("#select-streams").attr("row");
-			        $("#" + rowID).show(400);
-			        // $("#select-chaos").addClass("btn-filled");
-			        // rowID = $("#select-chaos").attr("row");
-			        // $("#" + rowID).show(400);
-			        $("#research .row .btn").click(function() {
-			            if ($(this).hasClass("btn-filled"))
-			                return;
-			            // trigger all stops
-			            $(".fa-stop").trigger("click");
-			            $("#research .row .btn").each(function(j,elem) {
-			                if ($(elem).hasClass("btn-filled")) {
-			                    $(elem).removeClass("btn-filled");
-			                    rowID = $(elem).attr("row");
-			                    $("#" + rowID).hide(400);
-			                }
-			            });
-			            $(this).addClass("btn-filled");
-			            rowID = $(this).attr("row");
-			            $("#" + rowID).show(400);
-			        });
-			        make_stream($("#stream-canvas")[0]);
-			        make_chaos($("#chaos-canvas")[0]);
-			    }
-			    $(document).ready(function() {
-			        $(".full-page").height(window.innerHeight);
-			        $(".canvas-container").height(window.innerHeight/1.5*0.9);
-			        if (window.matchMedia('(min-width: 767px)').matches) {
-			            // browser is at least 767px wide
-			            $(".canvas-container").width(window.innerWidth/2*0.95);
-			        } else {
-			            // the width of browser is less then 767px
-			            $(".canvas-container").width(window.innerWidth*0.9);
-			        }
-			        setupWriting();
-			    });
-			</script>
-
-	</body>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>

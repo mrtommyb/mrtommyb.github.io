@@ -1,101 +1,91 @@
-function name_to_abbrev(name) {
-    // Given a full name, return just initials until last name
-    var names = name.split(" ");
-    var lastName = names.slice(-1)[0];
+/* writing.js — Fetch recent arXiv papers (vanilla JS, no jQuery) */
 
-    var returnName = "";
-    for (var i=0; i < (names.length-1); i++) {
-        returnName += names[i][0] + ". ";
+function nameToAbbrev(name) {
+    const parts = name.trim().split(/\s+/);
+    const lastName = parts[parts.length - 1];
+    let initials = '';
+    for (let i = 0; i < parts.length - 1; i++) {
+        initials += parts[i][0] + '. ';
     }
-    return returnName + lastName
+    return initials + lastName;
 }
 
-// Load recent paper list
 function setupWriting() {
-    var n = 3; // number of papers
+    const container = document.getElementById('recent-papers');
+    if (!container) return;
 
-    $.ajax({
-        url: 'https://export.arxiv.org/api/query?search_query=au:barclay_t+cat:astro-ph&start=0&max_results=100&sortBy=submittedDate', // or lastUpdatedDate
-        type: 'GET',
-        dataType: "xml",
-        async: true,
-        success: function(xml) {
-            $("#recent-papers").empty();
-            var num = 0;
-            $(xml).find("entry").each(function(){
-                var title = $(this).find("title").text().replace(/(\r\n|\n|\r)/gm,""),
-                    link = $(this).find("id").text(),
-                    rawDate = $(this).find("published").text(),
-                    firstAuthor = $(this).find("author").find("name").first().text();
-                    secondAuthor = $(this).find("author").find("name").eq(1).text();
-                    thirdAuthor = $(this).find("author").find("name").eq(2).text();
+    const numPapers = 3;
+    const url = 'https://export.arxiv.org/api/query?search_query=au:barclay_t+cat:astro-ph&start=0&max_results=100&sortBy=submittedDate';
 
+    fetch(url)
+        .then(function (response) {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.text();
+        })
+        .then(function (xmlText) {
+            const parser = new DOMParser();
+            const xml = parser.parseFromString(xmlText, 'application/xml');
+            const entries = xml.querySelectorAll('entry');
 
-                // Author stuff
-                var lastName = firstAuthor.split(" ").slice(-1)[0];
-                var lastName2 = secondAuthor.split(" ").slice(-1)[0];
-                var lastName3 = thirdAuthor.split(" ").slice(-1)[0];
-                if (lastName.toLowerCase() != "barclay" && lastName2.toLowerCase() != "barclay" && lastName3.toLowerCase() != "barclay") {
-                    return;
-                }
-                var authors = $(this).find("author").find("name"),
-                    strAuthor;
-                if (authors.length == 1) {
-                    strAuthor = name_to_abbrev(authors.first().text());
-                } else if (authors.length == 2) {
-                    strAuthor = name_to_abbrev(authors.first().text()) + " & " + name_to_abbrev(authors.last().text());
-                } else {
-                    strAuthor = "";
-                    for (var i=0; i < authors.length; i++) {
-                        if (i == 0)
-                            strAuthor = name_to_abbrev($(authors[i]).text());
-                        else
-                            strAuthor += ", " + name_to_abbrev($(authors[i]).text());
-                        if (i >= 4) break;
+            container.innerHTML = '';
+            let count = 0;
+
+            entries.forEach(function (entry) {
+                if (count >= numPapers) return;
+
+                const authors = entry.querySelectorAll('author name');
+                if (authors.length === 0) return;
+
+                // Check if "Barclay" is in the first 3 author positions
+                let hasBarclay = false;
+                for (let i = 0; i < Math.min(3, authors.length); i++) {
+                    const lastName = authors[i].textContent.trim().split(/\s+/).pop();
+                    if (lastName.toLowerCase() === 'barclay') {
+                        hasBarclay = true;
+                        break;
                     }
-                    // add et al. to end because there are more authors
-                    if (i != authors.length)
-                        strAuthor = strAuthor + " et al.";
+                }
+                if (!hasBarclay) return;
 
+                // Build author string
+                let authorStr = '';
+                const maxShow = 5;
+                for (let i = 0; i < Math.min(maxShow, authors.length); i++) {
+                    const abbrev = nameToAbbrev(authors[i].textContent);
+                    if (i === 0) {
+                        authorStr = abbrev;
+                    } else {
+                        authorStr += ', ' + abbrev;
+                    }
+                }
+                if (authors.length > maxShow) {
+                    authorStr += ' et al.';
+                } else if (authors.length === 2) {
+                    authorStr = nameToAbbrev(authors[0].textContent) + ' & ' + nameToAbbrev(authors[1].textContent);
                 }
 
-                var authorSpan = $('<span>');
-                authorSpan.addClass("author");
-                authorSpan.text(strAuthor);
+                const title = entry.querySelector('title').textContent.replace(/[\r\n]+/g, ' ').trim();
+                const link = entry.querySelector('id').textContent.trim();
+                const rawDate = entry.querySelector('published').textContent.trim();
+                const dateParts = rawDate.split('T')[0].split('-');
+                const dateStr = '(' + dateParts[1] + '/' + dateParts[0] + ')';
 
-                // Date stuff
-                var date = rawDate.split("T")[0].split("-");
-                var dateSpan = $('<span>');
-                dateSpan.addClass('date');
-                dateSpan.text("(" + date[1] + "/" + date[0] + ") ");
+                const div = document.createElement('div');
+                div.className = 'paper-entry';
+                div.innerHTML =
+                    '<span class="paper-date">' + dateStr + '</span>' +
+                    '<span class="paper-authors">' + authorStr + '</span>' +
+                    '<br/><a class="paper-title" href="' + link + '">' + title + '</a>';
 
-                // Main paragraph element
-                var p = $('<p>');
-                p.css("opacity", 0.);
-
-                var a = $('<a>');
-                a.attr("href", link);
-                a.text(title);
-
-                p.append(dateSpan);
-                p.append(authorSpan);
-                p.append("<br/>")
-                p.append(a);
-                $("#recent-papers").append(p);
-                num = num + 1;
-
-                p.animate({ opacity: 1}, 1000);
-
-                if (num >= n) {
-                    return false;
-                }
+                container.appendChild(div);
+                count++;
             });
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-            var p = $('<p>');
-            p.html("Unable to retrieve paper list!");
-            p.addClass("error");
-            $("#recent-papers").append(p);
-        }
-    });
+
+            if (count === 0) {
+                container.innerHTML = '<p class="error">No recent papers found.</p>';
+            }
+        })
+        .catch(function () {
+            container.innerHTML = '<p class="error">Unable to retrieve paper list.</p>';
+        });
 }

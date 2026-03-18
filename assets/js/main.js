@@ -15,8 +15,9 @@
 
     if (toggle && links) {
         toggle.addEventListener('click', function () {
-            toggle.classList.toggle('active');
+            var isOpen = toggle.classList.toggle('active');
             links.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
 
         // Close menu when a link is clicked

@@ -13,7 +13,7 @@
     --color-bg: #FFFFFF;
     --color-bg-alt: #F8F9FC;
     --color-text: #374151;
-    --color-text-light: #6B7280;
+    --color-text-light: #4B5563;
     --color-heading: #0B1D3A;
     --color-border: #E5E7EB;
 
@@ -84,6 +84,29 @@ h4 { font-size: 1.05rem; font-weight: 700; }
 p + p { margin-top: 1rem; }
 
 ul { list-style: none; }
+
+/* Accessible focus styles */
+*:focus-visible {
+    outline: 3px solid var(--color-blue);
+    outline-offset: 2px;
+}
+
+/* ---------- Skip Link (Accessibility) ---------- */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--color-blue);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    z-index: 10000;
+    font-weight: 600;
+    transition: top 0.3s ease;
+}
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--color-navy);
+}
 
 /* ---------- Utility ---------- */
 .container {
@@ -280,6 +303,7 @@ ul { list-style: none; }
 .hero h1 {
     color: #fff;
     margin-bottom: 0.75rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .hero-role {
@@ -376,6 +400,7 @@ ul { list-style: none; }
     font-weight: 700;
     color: #fff;
     line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .stat-label {
     display: block;
@@ -440,6 +465,7 @@ ul { list-style: none; }
 }
 .timeline-card:hover {
     box-shadow: var(--shadow-md);
+    transform: translateX(4px);
 }
 
 .timeline-date {
@@ -915,6 +941,15 @@ ul { list-style: none; }
     color: rgba(255, 255, 255, 0.4);
 }
 
+.footer-bottom .back-to-top {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    text-decoration: none;
+}
+.footer-bottom .back-to-top:hover {
+    color: #fff;
+}
+
 /* ---------- Responsive ---------- */
 
 /* Tablet */
@@ -1063,5 +1098,129 @@ ul { list-style: none; }
     }
     .pub-actions .btn {
         width: 100%;
+    }
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Subtle entrance animations for cards (respects prefers-reduced-motion) */
+@media (prefers-reduced-motion: no-preference) {
+    .timeline-card,
+    .software-card,
+    .pub-card,
+    .skill-card,
+    .research-card {
+        animation: fadeInUp 0.6s ease-out;
+        animation-fill-mode: both;
+    }
+
+    /* Stagger animations */
+    .timeline-item:nth-child(1) .timeline-card { animation-delay: 0.1s; }
+    .timeline-item:nth-child(2) .timeline-card { animation-delay: 0.15s; }
+    .timeline-item:nth-child(3) .timeline-card { animation-delay: 0.2s; }
+    .timeline-item:nth-child(4) .timeline-card { animation-delay: 0.25s; }
+    .timeline-item:nth-child(5) .timeline-card { animation-delay: 0.3s; }
+}
+
+/* ---------- Print Styles ---------- */
+@media print {
+    /* Hide interactive elements */
+    .site-nav,
+    .hero-actions,
+    .hero-links,
+    .btn,
+    .skip-link,
+    .nav-toggle {
+        display: none !important;
+    }
+
+    /* Reset backgrounds */
+    body,
+    .section,
+    .hero {
+        background: white !important;
+        color: black !important;
+    }
+
+    /* Ensure text is readable */
+    h1, h2, h3, h4,
+    .hero h1,
+    .hero-role,
+    .hero-org,
+    .hero-intro,
+    .timeline-card h3,
+    .pub-card h3,
+    .software-card h3 {
+        color: black !important;
+    }
+
+    /* Show URLs for links */
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    /* Page breaks */
+    .section {
+        page-break-inside: avoid;
+    }
+
+    .timeline-card,
+    .pub-card,
+    .software-card {
+        page-break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+
+    /* Compact spacing for print */
+    .section {
+        padding: 1.5rem 0;
+    }
+
+    .hero {
+        padding: 1rem 0;
+    }
+
+    .hero-image img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+}
+
+/* ---------- Performance Optimizations ---------- */
+/* Smooth transitions for interactive elements */
+.timeline-card,
+.software-card,
+.pub-card,
+.skill-card,
+.research-card {
+    transition: all var(--transition);
+}
+
+.btn {
+    transition: all var(--transition);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }

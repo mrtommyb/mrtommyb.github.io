@@ -5,60 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tom Barclay — Astrophysicist & Technical Leader</title>
     <meta name="description" content="Tom Barclay is an astrophysicist and technical leader at NASA Goddard Space Flight Center. 15+ years building and operating space telescopes, 150+ publications, open-source Python developer, and expert in Bayesian inference, signal detection, and large-scale data analysis." />
-    <meta name="author" content="Thomas Barclay" />
-    <meta name="keywords" content="NASA, astrophysics, exoplanets, space telescope, Python, Kepler, TESS, Roman Space Telescope, Pandora, software engineering, Bayesian inference, signal detection" />
-
-    <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Tom Barclay — Astrophysicist & Technical Leader" />
     <meta property="og:description" content="Astrophysicist at NASA. 15 years extracting signal from noise in space telescope data. Python, Bayesian inference, Monte Carlo simulation, and technical program leadership." />
-    <meta property="og:image" content="https://dr.tombarclay.com/images/tom.jpg" />
+    <meta property="og:image" content="images/tom.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dr.tombarclay.com" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Tom Barclay — Astrophysicist & Technical Leader" />
-    <meta name="twitter:description" content="Astrophysicist at NASA. 15 years building space telescopes and shipping Python packages." />
-    <meta name="twitter:image" content="https://dr.tombarclay.com/images/tom.jpg" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="alternate icon" href="favicon.ico" />
-
-    <!-- Fonts with performance optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://dr.tombarclay.com" />
-
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
+    <nav class="site-nav" id="site-nav">
         <div class="nav-inner">
-            <a href="#" class="nav-brand" aria-label="Tom Barclay - Home">Tom Barclay</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <a href="#" class="nav-brand">Tom Barclay</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
             </button>
-            <ul class="nav-links" id="nav-links" role="menubar">
-                <li role="none"><a href="#missions" role="menuitem">Missions</a></li>
-                <li role="none"><a href="#software" role="menuitem">Software</a></li>
-                <li role="none"><a href="#publications" role="menuitem">Work</a></li>
-                <li role="none"><a href="#about" role="menuitem">About</a></li>
-                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
-                <li role="none"><a href="files/CVBarclay.pdf" class="nav-cv" role="menuitem">CV</a></li>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#missions">Missions</a></li>
+                <li><a href="#software">Software</a></li>
+                <li><a href="#publications">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="files/CVBarclay.pdf" class="nav-cv">CV</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero -->
-    <header class="hero" id="hero" role="banner">
+    <header class="hero" id="hero">
         <div class="hero-inner">
             <div class="hero-content">
                 <h1>Tom Barclay</h1>
@@ -82,12 +60,12 @@
                 </ul>
             </div>
             <div class="hero-image">
-                <img src="images/tom.jpg" alt="Tom Barclay, NASA Astrophysicist" width="320" height="320" />
+                <img src="images/tom.jpg" alt="Tom Barclay" />
             </div>
         </div>
     </header>
 
-    <main id="main-content">
+    <main>
 
         <!-- Impact Stats -->
         <section class="stats-bar">
@@ -307,6 +285,7 @@
 
                         <h4 class="awards-heading">Awards</h4>
                         <ul class="awards-list">
+                            <li><strong>IEEE Aerospace Conference, Best Paper in Track</strong> (2025)</li>
                             <li><strong>NASA Early Career Achievement Medal</strong> (2022)</li>
                             <li><strong>NASA Exceptional Public Service Medal</strong> (2017)</li>
                             <li><strong>ASD Peer Award</strong> (2019)</li>
@@ -317,7 +296,7 @@
                         </div>
                     </div>
                     <div class="about-image">
-                        <img src="images/tomatkennedy.jpg" alt="Tom Barclay at Kennedy Space Center for Pandora SmallSat launch" width="380" height="285" loading="lazy" />
+                        <img src="images/tomatkennedy.jpg" alt="Tom Barclay at Kennedy Space Center" loading="lazy" />
                     </div>
                 </div>
 
@@ -408,67 +387,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Thomas Barclay. All rights reserved. · <a href="#" class="back-to-top">Back to top ↑</a></p>
+                <p>&copy; <span id="year"></span> Thomas Barclay. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
-
-    <!-- Schema.org Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Thomas Barclay",
-      "alternateName": "Tom Barclay",
-      "url": "https://dr.tombarclay.com",
-      "image": "https://dr.tombarclay.com/images/tom.jpg",
-      "jobTitle": "Astrophysicist & Operations Project Scientist",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "NASA Goddard Space Flight Center",
-        "url": "https://www.nasa.gov/goddard"
-      },
-      "alumniOf": [
-        {
-          "@type": "Organization",
-          "name": "University College London"
-        },
-        {
-          "@type": "Organization",
-          "name": "University of Manchester"
-        },
-        {
-          "@type": "Organization",
-          "name": "University of Leeds"
-        }
-      ],
-      "award": [
-        "NASA Early Career Achievement Medal (2022)",
-        "NASA Exceptional Public Service Medal (2017)",
-        "ASD Peer Award (2019)"
-      ],
-      "description": "Astrophysicist and technical leader at NASA Goddard Space Flight Center. 15+ years building and operating space telescopes, 150+ publications, open-source Python developer.",
-      "knowsAbout": [
-        "Astrophysics",
-        "Exoplanets",
-        "Space Telescopes",
-        "Python Programming",
-        "Bayesian Inference",
-        "Signal Detection",
-        "Time Series Analysis",
-        "Machine Learning",
-        "Technical Program Management"
-      ],
-      "sameAs": [
-        "https://github.com/mrtommyb",
-        "https://www.linkedin.com/pub/tom-barclay/22/794/287",
-        "https://scholar.google.com/citations?user=Az-8dqUAAAAJ",
-        "https://science.gsfc.nasa.gov/sci/bio/thomas.barclay"
-      ],
-      "email": "thomas.barclay@nasa.gov"
-    }
-    </script>
 </body>
 </html>

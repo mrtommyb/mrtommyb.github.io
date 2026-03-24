@@ -72,10 +72,26 @@ function setupWriting() {
 
                 const div = document.createElement('div');
                 div.className = 'paper-entry';
-                div.innerHTML =
-                    '<span class="paper-date">' + dateStr + '</span>' +
-                    '<span class="paper-authors">' + authorStr + '</span>' +
-                    '<br/><a class="paper-title" href="' + link + '">' + title + '</a>';
+
+                const dateSpan = document.createElement('span');
+                dateSpan.className = 'paper-date';
+                dateSpan.textContent = dateStr;
+
+                const authorsSpan = document.createElement('span');
+                authorsSpan.className = 'paper-authors';
+                authorsSpan.textContent = authorStr;
+
+                const br = document.createElement('br');
+
+                const titleLink = document.createElement('a');
+                titleLink.className = 'paper-title';
+                titleLink.href = link;
+                titleLink.textContent = title;
+
+                div.appendChild(dateSpan);
+                div.appendChild(authorsSpan);
+                div.appendChild(br);
+                div.appendChild(titleLink);
 
                 container.appendChild(div);
                 count++;
